@@ -1,0 +1,10 @@
+# Tema da Pérgamo (papel 3 pode ajustar)
+[theme]
+primaryColor = "#C1652F"
+backgroundColor = "#F7F5F1"
+secondaryBackgroundColor = "#ECE7DC"
+textColor = "#1F2320"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false

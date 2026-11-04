@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Ágora do ENEM",
+    "nivel": 3,
+    "membros": 248,
+    "descricao": "Dúvidas e respostas verificadas para o ENEM."
+  },
+  {
+    "nome": "Ágora de Matemática",
+    "nivel": 2,
+    "membros": 131,
+    "descricao": "Resolução de exercícios em conjunto."
+  },
+  {
+    "nome": "Ágora de Redação",
+    "nivel": 2,
+    "membros": 96,
+    "descricao": "Trocas de textos e dicas de correção."
+  },
+  {
+    "nome": "Ágora de Física",
+    "nivel": 1,
+    "membros": 34,
+    "descricao": "Discussões sobre mecânica e eletricidade."
+  },
+  {
+    "nome": "Ágora de Filosofia",
+    "nivel": 1,
+    "membros": 22,
+    "descricao": "Debates e leituras do grupo."
+  }
+]

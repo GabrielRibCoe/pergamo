@@ -1,0 +1,779 @@
+{
+  "senha_teste": "123456",
+  "usuarios": [
+    {
+      "nome": "Renato Alves",
+      "email": "renato@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Matemática",
+          "Física"
+        ],
+        "estilos": [
+          "pratico",
+          "logico"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "metodo": "pratica_guiada",
+        "preco_hora": 45
+      }
+    },
+    {
+      "nome": "Camila Rocha",
+      "email": "camila.rocha@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Redação",
+          "Português",
+          "Literatura"
+        ],
+        "estilos": [
+          "leitura"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "metodo": "teoria_primeiro",
+        "preco_hora": 55
+      }
+    },
+    {
+      "nome": "Bruno Nogueira",
+      "email": "bruno.nogueira@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Química",
+          "Biologia"
+        ],
+        "estilos": [
+          "visual",
+          "pratico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "metodo": "visual_recursos",
+        "preco_hora": 50
+      }
+    },
+    {
+      "nome": "Fernanda Lima",
+      "email": "fernanda.lima@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Matemática"
+        ],
+        "estilos": [
+          "logico",
+          "leitura"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "metodo": "socratico",
+        "preco_hora": 60
+      }
+    },
+    {
+      "nome": "Thiago Martins",
+      "email": "thiago.martins@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Física",
+          "Matemática"
+        ],
+        "estilos": [
+          "pratico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "individual",
+        "metodo": "pratica_guiada",
+        "preco_hora": 70
+      }
+    },
+    {
+      "nome": "Larissa Duarte",
+      "email": "larissa.duarte@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "História",
+          "Geografia",
+          "Filosofia",
+          "Sociologia"
+        ],
+        "estilos": [
+          "auditivo",
+          "leitura"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "metodo": "socratico",
+        "preco_hora": 45
+      }
+    },
+    {
+      "nome": "Pedro Souza",
+      "email": "pedro.souza@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Inglês",
+          "Espanhol"
+        ],
+        "estilos": [
+          "auditivo",
+          "pratico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "metodo": "pratica_guiada",
+        "preco_hora": 40
+      }
+    },
+    {
+      "nome": "Juliana Prado",
+      "email": "juliana.prado@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Biologia",
+          "Química"
+        ],
+        "estilos": [
+          "visual",
+          "leitura"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "metodo": "visual_recursos",
+        "preco_hora": 50
+      }
+    },
+    {
+      "nome": "Gustavo Teixeira",
+      "email": "gustavo.teixeira@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Matemática",
+          "Informática"
+        ],
+        "estilos": [
+          "logico",
+          "pratico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "metodo": "pratica_guiada",
+        "preco_hora": 65
+      }
+    },
+    {
+      "nome": "Marina Costa",
+      "email": "marina.costa@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Português",
+          "Redação",
+          "Inglês"
+        ],
+        "estilos": [
+          "leitura",
+          "auditivo"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "debate",
+        "metodo": "teoria_primeiro",
+        "preco_hora": 50
+      }
+    },
+    {
+      "nome": "Rafael Mendes",
+      "email": "rafael.mendes@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Física",
+          "Química",
+          "Matemática"
+        ],
+        "estilos": [
+          "visual",
+          "logico"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "individual",
+        "metodo": "visual_recursos",
+        "preco_hora": 55
+      }
+    },
+    {
+      "nome": "Beatriz Carvalho",
+      "email": "beatriz.carvalho@pergamo.test",
+      "papel": "professor",
+      "perfil": {
+        "materias": [
+          "Artes",
+          "Literatura",
+          "Filosofia"
+        ],
+        "estilos": [
+          "visual",
+          "auditivo"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "metodo": "socratico",
+        "preco_hora": 40
+      }
+    },
+    {
+      "nome": "Miguel Souza",
+      "email": "miguel@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Matemática",
+          "Física",
+          "Redação"
+        ],
+        "estilos": [
+          "pratico",
+          "visual"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "concentracao",
+          "abstracao_matematica",
+          "ansiedade_provas"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Ana Beatriz Santos",
+      "email": "ana.beatriz.santos@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Química",
+          "Português",
+          "Espanhol"
+        ],
+        "estilos": [
+          "visual"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "individual",
+        "dificuldades": [
+          "memorizacao",
+          "concentracao",
+          "abstracao_matematica"
+        ],
+        "nivel": "superior"
+      }
+    },
+    {
+      "nome": "Lucas Pereira",
+      "email": "lucas.pereira@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Física",
+          "Biologia",
+          "Informática",
+          "Redação"
+        ],
+        "estilos": [
+          "visual"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "calculos_formulas",
+          "organizacao_estudos",
+          "concentracao"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Isabela Ferreira",
+      "email": "isabela.ferreira@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Redação",
+          "Artes"
+        ],
+        "estilos": [
+          "leitura"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "gestao_tempo",
+          "gramatica",
+          "interpretacao_texto"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Matheus Oliveira",
+      "email": "matheus.oliveira@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Geografia",
+          "Física",
+          "Redação"
+        ],
+        "estilos": [
+          "visual",
+          "logico"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "raciocinio_logico",
+          "calculos_formulas"
+        ],
+        "nivel": "superior"
+      }
+    },
+    {
+      "nome": "Sofia Ribeiro",
+      "email": "sofia.ribeiro@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "História",
+          "Biologia",
+          "Sociologia"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "redacao_dissertativa",
+          "raciocinio_logico"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Davi Gomes",
+      "email": "davi.gomes@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Física",
+          "Redação"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "debate",
+        "dificuldades": [
+          "concentracao",
+          "geometria_espacial"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Helena Barbosa",
+      "email": "helena.barbosa@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Geografia",
+          "Filosofia",
+          "Informática"
+        ],
+        "estilos": [
+          "pratico",
+          "logico"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "debate",
+        "dificuldades": [
+          "redacao_dissertativa",
+          "geometria_espacial"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Enzo Cardoso",
+      "email": "enzo.cardoso@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Filosofia",
+          "Informática"
+        ],
+        "estilos": [
+          "logico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "ansiedade_provas",
+          "concentracao",
+          "raciocinio_logico"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Laura Freitas",
+      "email": "laura.freitas@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Inglês",
+          "Física",
+          "Literatura"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "organizacao_estudos",
+          "raciocinio_logico"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Gabriel Araújo",
+      "email": "gabriel.araujo@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Literatura",
+          "Português",
+          "Redação"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "geometria_espacial",
+          "organizacao_estudos"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Valentina Moreira",
+      "email": "valentina.moreira@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Física",
+          "Química",
+          "Artes"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "individual",
+        "dificuldades": [
+          "gestao_tempo",
+          "concentracao"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Heitor Nunes",
+      "email": "heitor.nunes@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Redação",
+          "Geografia",
+          "Inglês",
+          "Sociologia"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "organizacao_estudos",
+          "redacao_dissertativa"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Manuela Dias",
+      "email": "manuela.dias@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Espanhol",
+          "Português",
+          "Matemática",
+          "Biologia"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "calculos_formulas",
+          "concentracao"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Arthur Ramos",
+      "email": "arthur.ramos@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Inglês",
+          "Química"
+        ],
+        "estilos": [
+          "visual",
+          "leitura"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "organizacao_estudos",
+          "interpretacao_texto",
+          "gestao_tempo"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Alice Monteiro",
+      "email": "alice.monteiro@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Literatura",
+          "Física",
+          "Artes"
+        ],
+        "estilos": [
+          "pratico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "interpretacao_texto"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Bernardo Castro",
+      "email": "bernardo.castro@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Filosofia",
+          "História",
+          "Literatura"
+        ],
+        "estilos": [
+          "auditivo",
+          "visual"
+        ],
+        "ritmo": "gradual",
+        "estrutura": "flexivel",
+        "social": "individual",
+        "dificuldades": [
+          "gramatica",
+          "concentracao",
+          "redacao_dissertativa"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Cecília Batista",
+      "email": "cecilia.batista@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Filosofia",
+          "Artes"
+        ],
+        "estilos": [
+          "logico"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "debate",
+        "dificuldades": [
+          "gramatica"
+        ],
+        "nivel": "vestibular"
+      }
+    },
+    {
+      "nome": "Samuel Pinto",
+      "email": "samuel.pinto@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Inglês",
+          "Sociologia",
+          "Artes"
+        ],
+        "estilos": [
+          "auditivo"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "estruturada",
+        "social": "individual",
+        "dificuldades": [
+          "raciocinio_logico",
+          "ansiedade_provas",
+          "concentracao"
+        ],
+        "nivel": "medio"
+      }
+    },
+    {
+      "nome": "Lívia Campos",
+      "email": "livia.campos@pergamo.test",
+      "papel": "aluno",
+      "perfil": {
+        "materias": [
+          "Literatura",
+          "História",
+          "Biologia"
+        ],
+        "estilos": [
+          "logico",
+          "leitura"
+        ],
+        "ritmo": "rapido",
+        "estrutura": "flexivel",
+        "social": "debate",
+        "dificuldades": [
+          "memorizacao"
+        ],
+        "nivel": "medio"
+      }
+    }
+  ],
+  "vinculos": [
+    {
+      "aluno": "heitor.nunes@pergamo.test",
+      "professor": "renato@pergamo.test"
+    },
+    {
+      "aluno": "sofia.ribeiro@pergamo.test",
+      "professor": "renato@pergamo.test"
+    },
+    {
+      "aluno": "isabela.ferreira@pergamo.test",
+      "professor": "renato@pergamo.test"
+    },
+    {
+      "aluno": "alice.monteiro@pergamo.test",
+      "professor": "renato@pergamo.test"
+    },
+    {
+      "aluno": "samuel.pinto@pergamo.test",
+      "professor": "camila.rocha@pergamo.test"
+    },
+    {
+      "aluno": "laura.freitas@pergamo.test",
+      "professor": "camila.rocha@pergamo.test"
+    },
+    {
+      "aluno": "cecilia.batista@pergamo.test",
+      "professor": "camila.rocha@pergamo.test"
+    },
+    {
+      "aluno": "lucas.pereira@pergamo.test",
+      "professor": "fernanda.lima@pergamo.test"
+    },
+    {
+      "aluno": "davi.gomes@pergamo.test",
+      "professor": "fernanda.lima@pergamo.test"
+    },
+    {
+      "aluno": "arthur.ramos@pergamo.test",
+      "professor": "fernanda.lima@pergamo.test"
+    },
+    {
+      "aluno": "ana.beatriz.santos@pergamo.test",
+      "professor": "bruno.nogueira@pergamo.test"
+    },
+    {
+      "aluno": "manuela.dias@pergamo.test",
+      "professor": "bruno.nogueira@pergamo.test"
+    },
+    {
+      "aluno": "gabriel.araujo@pergamo.test",
+      "professor": "larissa.duarte@pergamo.test"
+    },
+    {
+      "aluno": "livia.campos@pergamo.test",
+      "professor": "larissa.duarte@pergamo.test"
+    },
+    {
+      "aluno": "matheus.oliveira@pergamo.test",
+      "professor": "pedro.souza@pergamo.test"
+    }
+  ]
+}

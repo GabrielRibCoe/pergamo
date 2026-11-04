@@ -1,0 +1,15 @@
+# ambiente
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# segredos (NUNCA enviar)
+.env
+.streamlit/secrets.toml
+
+# bancos locais
+*.db
+*.sqlite3

@@ -1,0 +1,38 @@
+[
+  {
+    "turma": "Matemática com Renato",
+    "titulo": "Lista de exercícios: funções do 1º grau",
+    "prazo": "07/11",
+    "status": "Pendente"
+  },
+  {
+    "turma": "Matemática com Renato",
+    "titulo": "Simulado de geometria plana",
+    "prazo": "14/11",
+    "status": "Pendente"
+  },
+  {
+    "turma": "Redação com Camila",
+    "titulo": "Redação dissertativa: tema livre",
+    "prazo": "10/11",
+    "status": "Entregue"
+  },
+  {
+    "turma": "Redação com Camila",
+    "titulo": "Reescrita com a correção da aula 3",
+    "prazo": "17/11",
+    "status": "Pendente"
+  },
+  {
+    "turma": "Física com Thiago",
+    "titulo": "Problemas de cinemática",
+    "prazo": "12/11",
+    "status": "Corrigida"
+  },
+  {
+    "turma": "Química com Bruno",
+    "titulo": "Mapa mental de ligações químicas",
+    "prazo": "15/11",
+    "status": "Pendente"
+  }
+]
