@@ -1,0 +1,13 @@
+{
+  "amostras": 5000,
+  "ruido": 0.1,
+  "camadas_escondidas": [
+    16,
+    8
+  ],
+  "iteracoes_usadas": 801,
+  "acuracia_treino": 0.9005,
+  "acuracia_teste": 0.898,
+  "acuracia_teste_sem_ruido": 0.995,
+  "confianca_media": 0.8799
+}

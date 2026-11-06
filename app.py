@@ -4,6 +4,7 @@ RESPONSÁVEL: papel 3 (Telas de entrada e integração).
 Cada tela é um arquivo em pergamo/ui/ com uma função render(repo). Para adicionar ou trocar
 uma tela, edite o dicionário TELAS abaixo (e os nomes em pergamo/constants.py).
 """
+# pyright: reportMissingImports=false
 import streamlit as st
 
 from pergamo import config, state
