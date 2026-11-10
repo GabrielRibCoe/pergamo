@@ -1,0 +1,15 @@
+[theme]
+# Cor principal para botões e destaques (Tom de verde)
+primaryColor = "#004741"
+
+# Cor de fundo principal da página (Tom de branco)
+backgroundColor = "#f0ede4"
+
+# Cor de fundo secundária para a barra lateral e caixas de formulários (Tom levemente mais escuro que o branco para dar destaque)
+secondaryBackgroundColor = "#e5e2d9"
+
+# Cor principal do texto
+textColor = "#111111"
+
+# Tipo de letra da interface
+font = "sans serif"

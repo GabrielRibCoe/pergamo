@@ -23,6 +23,18 @@ TELAS = {
 
 def main():
     st.set_page_config(page_title="Pérgamo", page_icon="📜", layout="centered")
+    st.set_page_config(page_title="Pérgamo", page_icon="📜", layout="centered")
+    
+    # CSS para forçar o destaque visual nas caixas de texto
+    st.markdown("""
+        <style>
+        div[data-baseweb="input"] > div {
+            border: 1.5px solid #004741 !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    
+    state.init()
     state.init()
     repo = get_repo()
 

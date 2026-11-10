@@ -58,3 +58,20 @@ Para usar sua IA de apoio com este projeto, veja [`docs/CONTEXTO_IA.md`](docs/CO
 
 - Nunca envie `.env`, senhas, a URI do MongoDB ou arquivos `.db` ao GitHub (o `.gitignore` já protege, mas confira).
 - Use somente dados fictícios. O campo de necessidades específicas de aprendizagem (se criado) é dado sensível pela LGPD.
+
+
+##  Papel 3: Telas de entrada e Integração
+
+Responsável pelo desenvolvimento da experiência inicial do usuário, fluxo de navegação central, segurança de credenciais e conexão com os módulos de banco de dados e inteligência artificial.
+
+### O que foi entregue:
+- **Roteador e Gerenciamento de Sessão (`app.py`): ** Configuração do roteador dinâmico baseado no estado da sessão (`st.session_state`), controlando o fluxo inteligente de telas para novos usuários e contas existentes conforme as regras do roteiro (Login ➔ Perfil ➔ Match / Menu)[cite: 1, 7].
+- **Tela de Login (`ui/login.py`): ** Sistema de autenticação integrado ao contrato `Repo`, com validação de credenciais e criptografia de verificação via `bcrypt.
+- **Tela de Criação de Conta (`ui/cadastro.py`):** Formulário de cadastro de novos usuários (alunos ou professores) com criptografia de senhas utilizando `bcrypt` para garantir que nenhuma senha fique em texto puro no banco.
+- **Tela de Perfil (`ui/perfil.py`):** Formulário dinâmico com campos específicos para alunos e professores, integrando diretamente a função de classificação da Inteligência Artificial (`classify()`) antes de persistir os dados.
+- **Identidade Visual (`.streamlit/config.toml`):** Configuração do tema personalizado da Pérgamo (cores oficiais e estilização de interface).
+
+### Como testar esta parte:
+1. Certifique-se de que o ambiente virtual está ativo e as dependências instaladas.
+2. Execute o comando na raiz do projeto:
+   `streamlit run app.py`
