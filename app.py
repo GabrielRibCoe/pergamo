@@ -10,7 +10,7 @@ import streamlit as st
 from pergamo import config, state
 from pergamo import constants as C
 from pergamo.db import get_repo
-from pergamo.ui import cadastro, login, match, menu, perfil
+from pergamo.ui import cadastro, components, login, match, menu, perfil
 
 TELAS = {
     C.TELA_LOGIN: login.render,
@@ -22,24 +22,20 @@ TELAS = {
 
 
 def main():
-    st.set_page_config(page_title="Pérgamo", page_icon="📜", layout="centered")
-    st.set_page_config(page_title="Pérgamo", page_icon="📜", layout="centered")
-    
-    # CSS para forçar o destaque visual nas caixas de texto
-    st.markdown("""
-        <style>
-        div[data-baseweb="input"] > div {
-            border: 1.5px solid #004741 !important;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-    
-    state.init()
+    st.set_page_config(
+        page_title="Pérgamo",
+        page_icon=components.caminho_asset("icone.png"),
+        layout="centered",
+    )
+
+    # Identidade visual (fontes, cores de campos, botões, formulários)
+    components.aplicar_tema()
+
     state.init()
     repo = get_repo()
 
     with st.sidebar:
-        st.markdown("### Pérgamo")
+        components.logo("logo_horizontal", largura=190, centralizar=False)
         usuario = state.usuario_logado(repo)
         if usuario:
             st.write(usuario["nome"])

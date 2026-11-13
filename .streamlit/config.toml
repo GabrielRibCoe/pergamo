@@ -1,10 +1,15 @@
-# Tema da Pérgamo (papel 3 pode ajustar)
 [theme]
-primaryColor = "#C1652F"
-backgroundColor = "#F7F5F1"
-secondaryBackgroundColor = "#ECE7DC"
-textColor = "#1F2320"
-font = "sans serif"
+# Cor principal para botões e destaques (Tom de verde)
+primaryColor = "#004741"
 
-[browser]
-gatherUsageStats = false
+# Cor de fundo principal da página (Tom de branco)
+backgroundColor = "#f0ede4"
+
+# Cor de fundo secundária para a barra lateral e caixas de formulários (Tom levemente mais escuro que o branco para dar destaque)
+secondaryBackgroundColor = "#e5e2d9"
+
+# Cor principal do texto
+textColor = "#111111"
+
+# Tipo de letra da interface
+font = "sans serif"
