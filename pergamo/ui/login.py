@@ -60,4 +60,4 @@ def render(repo):
         st.rerun()
     
     # Textinho de ajuda para testar o mockup
-    st.caption("Contas de teste: miguel@pergamo.test (aluno) e renato@pergamo.test (professor). Senha: 123456")
+    st.caption("Contas de teste: miguel@pergamo.test (aluno) e renato@pergamo.test (professor). Senha: 123456")

@@ -45,4 +45,4 @@ def render(repo):
     st.markdown("---")
     if st.button("Já tem uma conta? Volte para o Login", type="secondary"):
         st.session_state[C.SS_TELA] = C.TELA_LOGIN
-        st.rerun()
+        st.rerun()

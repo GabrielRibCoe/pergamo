@@ -83,4 +83,4 @@ def render(repo):
                 st.rerun()
                 
             except Exception as e:
-                st.error(f"Erro ao salvar perfil ou classificar na IA: {e}")
+                st.error(f"Erro ao salvar perfil ou classificar na IA: {e}")
