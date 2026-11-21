@@ -11,7 +11,7 @@ Uso:  python -m pergamo.ml.dataset
 """
 import random
 
-import pandas as pd
+import pandas as pd  # type: ignore[reportMissingModuleSource]
 
 from pergamo import constants as C
 from pergamo.config import DATA_DIR
