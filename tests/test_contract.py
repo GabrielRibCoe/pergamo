@@ -1,23 +1,34 @@
 """Testes do contrato (kit do dia 0).
 
-Os testes de banco rodam contra QUALQUER implementação de Repo. Quando o SqliteRepo e o MongoRepo
-ficarem prontos, o papel 1 (Dados) acrescenta a fábrica deles em FABRICAS e todos os testes passam
-a validar também os novos bancos.
+Os testes de banco rodam contra TODAS as implementações de Repo (memória, SQLite e MongoDB falso).
 """
 import pytest
 
 from pergamo import constants as C
 from pergamo.auth import hash_password, verify_password
 from pergamo.db.memory_repo import MemoryRepo
+from pergamo.db.mongo_repo import MongoRepo
+from pergamo.db.sqlite_repo import SqliteRepo
 from pergamo.ml.classifier import classify
 from pergamo.ml.match import compatibility, rank_professors
 
-# nome -> função que devolve um repositório VAZIO
-FABRICAS = {
-    "memory": lambda: MemoryRepo(seed_path="nao-existe.json"),
-    # "sqlite": lambda: SqliteRepo(":memory:"),   # papel 1 - Dados
-    # "mongo": ...                                # papel 1 - Dados (use um banco de teste)
-}
+
+def _fabricas() -> dict:
+    """nome -> função que devolve um repositório VAZIO. Todos passam pelos mesmos testes."""
+    fabricas = {
+        "memory": lambda: MemoryRepo(seed_path="nao-existe.json"),
+        "sqlite": lambda: SqliteRepo(":memory:"),
+    }
+    try:  # o MongoDB é testado com um Mongo FALSO (mongomock), sem internet
+        import mongomock
+
+        fabricas["mongo"] = lambda: MongoRepo(client=mongomock.MongoClient(), nome_banco="teste")
+    except ImportError:
+        pass
+    return fabricas
+
+
+FABRICAS = _fabricas()
 
 
 @pytest.fixture(params=list(FABRICAS))

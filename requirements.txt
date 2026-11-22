@@ -8,3 +8,4 @@ joblib==1.5.3
 bcrypt==5.0.0
 python-dotenv==1.2.2
 pytest==9.2.0
+mongomock==4.3.0

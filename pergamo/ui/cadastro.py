@@ -1,48 +1,39 @@
+"""Tela de criar conta. RESPONSÁVEL: papel 3 (Telas de entrada e integração)."""
 import streamlit as st
-import bcrypt
+
 from pergamo import constants as C
+from pergamo import state
+from pergamo.auth import hash_password
 from pergamo.ui import components
+
 
 def render(repo):
     components.logo("logo_horizontal", largura=210)
     st.title("Criar Conta na Pérgamo")
-    
+    st.caption("Use apenas dados fictícios neste mockup.")
+
     with st.form("form_cadastro"):
-        nome = st.text_input("Nome Completo")
-        email = st.text_input("E-mail")
-        senha = st.text_input("Senha", type="password")
-        
-        # O papel precisa bater com o que o banco espera
-        papel = st.selectbox("Você é:", ["aluno", "professor"])
-        
-        btn_criar = st.form_submit_button("Criar Conta", type="primary")
-        
-    if btn_criar:
-        if not nome or not email or not senha:
-            st.error("Por favor, preencha todos os campos!")
+        nome = st.text_input("Nome completo", key="cad_nome")
+        email = st.text_input("E-mail", key="cad_email")
+        senha = st.text_input("Senha (mínimo de 6 caracteres)", type="password", key="cad_senha")
+        papel = st.selectbox("Você é:", list(C.PAPEIS), format_func=C.PAPEIS.get, key="cad_papel")
+        criou = st.form_submit_button("Criar conta", type="primary")
+
+    if criou:
+        email = email.strip().lower()
+        if not nome.strip() or "@" not in email or len(senha) < 6:
+            st.error("Preencha o nome, um e-mail válido e uma senha com pelo menos 6 caracteres.")
         else:
-            # Criptografando a senha conforme exigência do roteiro
-            salt = bcrypt.gensalt()
-            senha_hash = bcrypt.hashpw(senha.encode('utf-8'), salt)
-            
             try:
-                # Chama o contrato Repo para criar o usuário
-                user_id = repo.create_user(email, senha_hash.decode('utf-8'), papel, nome)
-                
-                if user_id:
-                    st.success("Conta criada com sucesso!")
-                    # Salva os dados na sessão e manda para a tela de Perfil
-                    st.session_state[C.SS_USER_ID] = user_id
-                    st.session_state[C.SS_PAPEL] = papel
-                    st.session_state[C.SS_TELA] = C.TELA_PERFIL
-                    st.rerun()
-                else:
-                    st.error("Erro ao criar conta. Talvez o e-mail já esteja em uso.")
-            
-            except Exception as e:
-                st.error(f"Ocorreu um erro com o banco: {e}")
+                repo.create_user(email, hash_password(senha), papel, nome.strip())
+            except ValueError:  # o contrato do banco levanta ValueError se o e-mail já existe
+                st.error("Já existe uma conta com esse e-mail.")
+            except Exception as erro:
+                st.error(f"Ocorreu um erro com o banco: {erro}")
+            else:
+                state.entrar(repo.get_user_by_email(email))
+                state.ir_para(C.TELA_PERFIL)
 
     st.markdown("---")
-    if st.button("Já tem uma conta? Volte para o Login", type="secondary"):
-        st.session_state[C.SS_TELA] = C.TELA_LOGIN
-        st.rerun()
+    if st.button("Já tem uma conta? Volte para o Login", type="secondary", key="btn_voltar_login"):
+        state.ir_para(C.TELA_LOGIN)

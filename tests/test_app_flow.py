@@ -31,7 +31,7 @@ def _login(at, email, senha="123456"):
 
 def test_primeira_tela_e_login(app):
     assert not app.exception
-    assert app.title[0].value == "Pérgamo"
+    assert app.text_input(key="login_email")  # a tela de login tem o campo de e-mail
 
 
 def test_senha_errada_mostra_erro(app):
@@ -77,9 +77,53 @@ def test_conta_nova_de_aluno_passa_por_perfil_e_chega_ao_match(app):
     app.text_input(key="cad_senha").input("segredo123")
     _clicar(app, "Criar conta")
     assert not app.exception
-    assert app.title[0].value == "Seu perfil"
+    assert app.title[0].value == "Monte seu Perfil Pérgamo"
     app.multiselect(key="perfil_materias").select("Matemática")
     app.multiselect(key="perfil_estilos").select("pratico")
     _clicar(app, "Salvar perfil")
     assert not app.exception
     assert app.title[0].value == "Seus professores"
+
+
+def _criar_conta(at, nome, email, papel):
+    _clicar(at, "Criar conta")
+    at.text_input(key="cad_nome").input(nome)
+    at.text_input(key="cad_email").input(email)
+    at.text_input(key="cad_senha").input("segredo123")
+    at.selectbox(key="cad_papel").select(papel)
+    _clicar(at, "Criar conta")
+    assert not at.exception
+
+
+def test_estilo_auditivo_e_classificado_como_ouvinte(app):
+    """Garante que o formulário grava os valores do contrato (constants.py) que a IA entende."""
+    from pergamo.db import get_repo
+
+    _criar_conta(app, "Aluna Teste", "aluna.teste@pergamo.test", "aluno")
+    app.multiselect(key="perfil_materias").select("Matemática")
+    app.multiselect(key="perfil_estilos").select("auditivo")
+    _clicar(app, "Salvar perfil")
+    assert not app.exception
+    repo = get_repo()
+    perfil = repo.get_profile(repo.get_user_by_email("aluna.teste@pergamo.test")["id"])
+    assert perfil["estilos"] == ["auditivo"]
+    assert perfil["perfil_label"] == "Ouvinte"
+
+
+def test_professor_novo_salva_metodo_e_preco_e_vai_ao_menu(app):
+    from pergamo.db import get_repo
+
+    _criar_conta(app, "Prof Teste", "prof.teste@pergamo.test", "professor")
+    app.multiselect(key="perfil_materias").select("Física")
+    app.multiselect(key="perfil_estilos").select("pratico")
+    _clicar(app, "Salvar perfil")
+    assert not app.exception
+    assert app.title[0].value.startswith("Olá, Prof")
+    repo = get_repo()
+    perfil = repo.get_profile(repo.get_user_by_email("prof.teste@pergamo.test")["id"])
+    assert "metodo" in perfil and perfil["preco_hora"] >= 10
+
+
+def test_email_repetido_mostra_mensagem_clara(app):
+    _criar_conta(app, "Outro Miguel", "miguel@pergamo.test", "aluno")  # e-mail do seed
+    assert any("Já existe uma conta" in e.value for e in app.error)
