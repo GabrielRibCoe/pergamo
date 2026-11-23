@@ -53,7 +53,7 @@ def test_aluno_vai_para_match_e_depois_para_o_menu(app):
     assert app.title[0].value.startswith("Olá, Miguel")
     assert [t.label for t in app.tabs] == ["Turmas", "Atividades", "Ágoras"]
     # desvincular volta para o match
-    _clicar(app, "Desvincular")
+    _clicar(app, "Sim, desvincular")  # botão de confirmação dentro do popover
     assert app.title[0].value == "Seus professores"
 
 
@@ -127,3 +127,45 @@ def test_professor_novo_salva_metodo_e_preco_e_vai_ao_menu(app):
 def test_email_repetido_mostra_mensagem_clara(app):
     _criar_conta(app, "Outro Miguel", "miguel@pergamo.test", "aluno")  # e-mail do seed
     assert any("Já existe uma conta" in e.value for e in app.error)
+
+
+def _html_da_tela(at) -> str:
+    """Junta todo o HTML/markdown mostrado na tela (os cartões do menu são HTML)."""
+    return " ".join(m.value for m in at.markdown)
+
+
+def test_menu_do_aluno_mostra_cabecalho_professor_e_colegas(app):
+    _login(app, "miguel@pergamo.test")
+    _clicar(app, "Ver detalhes")
+    _clicar(app, "Fazer match")
+    assert not app.exception
+    tela = _html_da_tela(app)
+    assert "Miguel Souza" in tela and "Aluno" in tela          # cabeçalho com o resumo do usuário
+    assert "Match" in tela and "Professor" in tela              # cartão do professor com a nota de match
+    assert "Colegas de turma" in [s.value for s in app.subheader]
+    assert "Seu professor" in [s.value for s in app.subheader]
+
+
+def test_menu_do_professor_mostra_resumo_da_turma(app):
+    _login(app, "renato@pergamo.test")
+    assert not app.exception
+    tela = _html_da_tela(app)
+    assert "alunos na turma" in tela                            # quantidade de alunos
+    assert all(tipo in tela for tipo in ("Prático", "Ouvinte", "Visual", "Leitor", "Racional"))  # distribuição
+    assert "Sua turma" in [s.value for s in app.subheader]
+
+
+def test_abas_de_atividades_e_agoras_tem_cartoes_com_status_e_nivel(app):
+    _login(app, "renato@pergamo.test")
+    tela = _html_da_tela(app)
+    assert "pgm-badge pendente" in tela and "pgm-badge corrigida" in tela and "Nota " in tela
+    assert "Nível 3" in tela and "Respostas verificadas por IA" in tela and "Você participa" in tela
+
+
+def test_nomes_com_html_sao_escapados():
+    from pergamo.ui import menu
+
+    perigoso = '<script>alert(1)</script> Ana'
+    assert "<script>" not in menu._avatar(perigoso)
+    assert "<script>" not in menu._cartao_aluno({"id": "1", "nome": perigoso, "perfil_label": "Prático"})
+    assert menu._iniciais("ana maria silva") == "AS" and menu._iniciais("") == "?"

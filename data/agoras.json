@@ -3,30 +3,42 @@
     "nome": "Ágora do ENEM",
     "nivel": 3,
     "membros": 248,
-    "descricao": "Dúvidas e respostas verificadas para o ENEM."
+    "descricao": "Dúvidas e respostas verificadas para o ENEM.",
+    "participando": true
   },
   {
     "nome": "Ágora de Matemática",
     "nivel": 2,
     "membros": 131,
-    "descricao": "Resolução de exercícios em conjunto."
+    "descricao": "Resolução de exercícios em conjunto.",
+    "participando": true
   },
   {
     "nome": "Ágora de Redação",
     "nivel": 2,
     "membros": 96,
-    "descricao": "Trocas de textos e dicas de correção."
+    "descricao": "Troca de textos e dicas de correção.",
+    "participando": true
   },
   {
     "nome": "Ágora de Física",
     "nivel": 1,
     "membros": 34,
-    "descricao": "Discussões sobre mecânica e eletricidade."
+    "descricao": "Discussões sobre mecânica e eletricidade.",
+    "participando": false
   },
   {
     "nome": "Ágora de Filosofia",
     "nivel": 1,
     "membros": 22,
-    "descricao": "Debates e leituras do grupo."
+    "descricao": "Debates e leituras do grupo.",
+    "participando": false
+  },
+  {
+    "nome": "Ágora de Química",
+    "nivel": 1,
+    "membros": 18,
+    "descricao": "Reações, tabela periódica e experimentos.",
+    "participando": false
   }
 ]

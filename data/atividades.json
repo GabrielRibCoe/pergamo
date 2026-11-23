@@ -2,37 +2,60 @@
   {
     "turma": "Matemática com Renato",
     "titulo": "Lista de exercícios: funções do 1º grau",
-    "prazo": "07/11",
+    "descricao": "Resolva os exercícios 1 a 12 da apostila e confira com o gabarito.",
+    "prazo": "25/11",
     "status": "Pendente"
   },
   {
     "turma": "Matemática com Renato",
     "titulo": "Simulado de geometria plana",
-    "prazo": "14/11",
+    "descricao": "20 questões no estilo ENEM, com tempo de 1 hora.",
+    "prazo": "28/11",
     "status": "Pendente"
+  },
+  {
+    "turma": "Matemática com Renato",
+    "titulo": "Problemas de porcentagem",
+    "descricao": "Aplicações do dia a dia: descontos, juros e proporções.",
+    "prazo": "14/11",
+    "status": "Corrigida",
+    "nota": "9,0"
   },
   {
     "turma": "Redação com Camila",
     "titulo": "Redação dissertativa: tema livre",
-    "prazo": "10/11",
+    "descricao": "30 linhas, com proposta de intervenção.",
+    "prazo": "20/11",
     "status": "Entregue"
   },
   {
     "turma": "Redação com Camila",
     "titulo": "Reescrita com a correção da aula 3",
-    "prazo": "17/11",
+    "descricao": "Ajuste a introdução e a conclusão conforme os comentários.",
+    "prazo": "27/11",
     "status": "Pendente"
+  },
+  {
+    "turma": "Redação com Camila",
+    "titulo": "Análise de repertório sociocultural",
+    "descricao": "Escolha 3 repertórios e explique como usá-los.",
+    "prazo": "10/11",
+    "status": "Corrigida",
+    "nota": "8,5"
   },
   {
     "turma": "Física com Thiago",
     "titulo": "Problemas de cinemática",
+    "descricao": "Movimento uniforme e uniformemente variado.",
     "prazo": "12/11",
-    "status": "Corrigida"
+    "status": "Corrigida",
+    "nota": "7,5"
   },
   {
-    "turma": "Química com Bruno",
-    "titulo": "Mapa mental de ligações químicas",
-    "prazo": "15/11",
-    "status": "Pendente"
+    "turma": "Física com Thiago",
+    "titulo": "Mapa mental de leis de Newton",
+    "descricao": "Um esquema visual com exemplos de cada lei.",
+    "prazo": "26/11",
+    "status": "Entregue"
   }
 ]
